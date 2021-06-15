@@ -4,13 +4,6 @@ import PropTypes from 'prop-types';
 const Search = ({ searchUsers, showClear, clearUsers, setAlert }) => {
   const [text, setText] = useState('');
 
-  Search.propTypes = {
-    searchUsers: PropTypes.func.isRequired,
-    clearUsers: PropTypes.func.isRequired,
-    showClear: PropTypes.bool.isRequired,
-    setAlert: PropTypes.func.isRequired,
-  };
-
   const onSubmit = (e) => {
     e.preventDefault();
     if (text === '') {
@@ -46,6 +39,13 @@ const Search = ({ searchUsers, showClear, clearUsers, setAlert }) => {
       )}
     </div>
   );
+};
+
+Search.propTypes = {
+  searchUsers: PropTypes.func.isRequired,
+  clearUsers: PropTypes.func.isRequired,
+  showClear: PropTypes.bool.isRequired,
+  setAlert: PropTypes.func.isRequired,
 };
 
 export default Search;
